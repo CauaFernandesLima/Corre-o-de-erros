@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senai Esportivo</title>
+    <link rel="shortcut icon" type="image" href="images/icone.png"/>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<style>
+    :root {
+        --verdeescuro: #002500;
+        --verdeclaro: #D2FF96;
+        --branco: #ffffff;
+        --cinza: #f1f0f0;
+        --verdemeio: #004d00;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: var(--branco);
+        background-color: var(--verdemeio);
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    nav ul li a:hover {
+        background-color: var(--verdeescuro);
+    }
+
+    .borda {
+        border: 5px solid var(--verdeescuro);
+    }
+
+</style>
+
+<body style="background-color: var(--verdeclaro);">
+    <header>
+        <h1>Senai Esportivo</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" rel="prev">Página inicial</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="formulario.html" rel="next">Formulário</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <br>
+        <div>
+            <h2>Galeria</h2>
+            <img src="images/pimeiraimg.png" alt="Jogador conduzindo a bola" width="300px" height="20%">
+            <img src="images/segundaimfg.jfif.png" alt="jogadore comemorando"width="360px" height="20%">
+            <img src="images/terceiraimg.jfif.png" alt="jogadores disputando"width="267px" height="20%">
+            <img src="images/quartaimg.jfif.png" alt="jogadodres correndo"width="300px" height="20%">
+            <img src="images/quintaimg.jfif.png" alt="jogador sofrendo falta"width="350px" height="20%">
+            <img src="images/sextaimg.jfif.png" alt="comemoração de gol"width="290px" height="20%">
+            <br>
+            <video controls>
+                <source src="midia/Rick Astley - Never Gonna Give You Up (Official Music Video) (360p) (video-converter.com).webm">
+                <source src="midia/Rick Astley - Never Gonna Give You Up (Official Music Video) (360p).m4v">
+                <source src="midia/Rick Astley - Never Gonna Give You Up (Official Music Video) (360p).mp4">
+                <source src="midia/Rick Astley - Never Gonna Give You Up (Official Music Video) (360p).ogv">
+                <p>Rick Astley brabo demais cantando never gona give you Up.</p>
+            </video>
+            <hr>
+            
+            <audio controls>
+                <source src="midia/HINO DO SANTOS-SP.mp3">
+                <source src="midia/HINO DO SANTOS-SP.wav">
+                <source src="midia/HINO DO SANTOS-SP.ogg">
+            </audio>
+        </div>
+    </main>
+
+    <footer>
+        <p style="font-size: 20px;">Conteúdo brabo</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

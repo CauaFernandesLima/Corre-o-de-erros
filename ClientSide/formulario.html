@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senai Esportivo</title>
+    <link rel="shortcut icon" type="image" href="images/icone.png"/>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<style>
+    :root {
+        --verdeescuro: #002500;
+        --verdeclaro: #D2FF96;
+        --branco: #ffffff;
+        --cinza: #f1f0f0;
+        --verdemeio: #004d00;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: var(--branco);
+        background-color: var(--verdemeio);
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    nav ul li a:hover {
+        background-color: var(--verdeescuro);
+    }
+
+    .borda {
+        border: 5px solid var(--verdeescuro);
+    }
+
+</style>
+
+<body style="background-color: var(--verdeclaro);">
+    <header>
+        <h1>Senai Esportivo</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" rel="prev">Página inicial</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="formulario.html" rel="next">Formulário</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <br> 
+        <div>
+            <form id="form" onsubmit="return validateForm()">
+                <fieldset>
+                    <legend>Dados de Login</legend>
+                    <label for="nome">Escreva seu nome:</label>
+                    <input type="text" id="nome" name="nome" required />
+
+                    <label for="nascimento">Data de nascimento:</label>
+                    <input type="date" id="nascimento" name="nascimento" required />
+                    
+                    <label for="email">Qual seu Email:</label>
+                    <input type="email" id="email" name="email" required />
+                    
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" required />
+                    
+                    <label for="confirmar-senha">Confirme a senha:</label>
+                    <input type="password" id="confirmar-senha" name="confirmar-senha" required />
+                </fieldset>
+
+                <fieldset>
+                    <legend>Informações Esportivas</legend>
+                    <label for="esporte-favorito">Esporte favorito:</label>
+                    <input type="text" id="esporte-favorito" name="esporte-favorito" required />
+                    
+                    <label for="atividade-praticada">Atividade esportiva praticada:</label>
+                    <input type="text" id="atividade-praticada" name="atividade-praticada" required />
+                    
+                    <label for="frequencia">Frequência de prática:</label>
+                    <select id="frequencia" name="frequencia" required>
+                        <option value="diariamente">Diariamente</option>
+                        <option value="semanalmente">Semanalmente</option>
+                        <option value="mensalmente">Mensalmente</option>
+                        <option value="raramente">Raramente</option>
+                    </select>
+                    
+                    <label for="nivel">Nível de habilidade:</label>
+                    <select id="nivel" name="nivel" required>
+                        <option value="iniciante">Iniciante</option>
+                        <option value="intermediario">Intermediário</option>
+                        <option value="avancado">Avançado</option>
+                    </select>
+
+                    <label for="estado">Estado do Sudeste:</label>
+                    <select id="estado" name="estado" required onchange="updateCidades()">
+                        <option value="">Selecione o estado</option>
+                        <option value="sp">São Paulo</option>
+                        <option value="rj">Rio de Janeiro</option>
+                        <option value="mg">Minas Gerais</option>
+                        <option value="es">Espírito Santo</option>
+                    </select>
+
+                    <label for="cidade">Cidade:</label>
+                    <select id="cidade" name="cidade" required disabled>
+                        <option value="">Selecione a cidade</option>
+                    </select>
+                    
+                    <label for="time-favorito">Time favorito:</label>
+                    <input type="text" id="time-favorito" name="time-favorito" required />
+                    
+                    <label for="comentarios">Comentários:</label>
+                    <textarea id="comentarios" name="comentarios" rows="4" cols="50" placeholder="Escreva seus comentários aqui"></textarea>
+                </fieldset>
+
+                <input type="submit" value="Enviar" />
+                <input type="reset" value="Limpar" />
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p style="font-size: 20px;">Conteúdo brabo</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

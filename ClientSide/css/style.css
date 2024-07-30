@@ -1,0 +1,171 @@
+@charset "UTF-8"; /* Define a codificação de caracteres como UTF-8 */
+
+/* Seleciona todos os elementos e remove margem, borda, padding, decoração de texto e define o box-sizing para border-box */
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box; 
+    font-family: Arial, Helvetica, sans-serif; /* Define a família de fontes para Arial, Helvetica e fontes sans-serif */
+}
+
+/* Define variáveis de cores para reutilização */
+:root{
+    --verdeescuro: #002500;
+    --verdeclaro: #D2FF96;
+    --branco: #ffffff;
+    --cinza: #f1f0f0;
+    --verdemeio: #004d00;
+}
+
+/* Define a altura da linha do corpo do documento */
+body {
+    line-height: 1.6;
+    background-color: var(--verdeclaro);
+}
+
+/* Estiliza a tag <main> */
+main {
+    padding: 20px; /* Espaçamento interno de 20px */
+    background-color: var(--cinza); /* Cor de fundo usando a variável --cinza */
+    width: 80%; /* Largura de 80% do elemento pai */
+    max-width: 1200px; /* Largura máxima de 1200px */
+    margin: 20px auto; /* Centraliza horizontalmente com margens verticais de 20px */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao redor do elemento */
+    border-radius: 8px; /* Bordas arredondadas com raio de 8px */
+}
+
+/* Estiliza a tag <header> */
+header {
+    background-color: #002500; /* Cor de fundo */
+    text-align: center; /* Alinhamento do texto ao centro */
+    padding: 20px; /* Espaçamento interno de 20px */
+    color: #ffffff; /* Cor do texto */
+}
+
+/* Estiliza a lista de navegação dentro de <nav> */
+nav ul {
+    display: flex; /* Usar layout flexível */
+    justify-content: space-evenly; /* Distribui o espaço uniformemente entre os itens */
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o espaçamento interno */
+    list-style-type: none;
+}
+
+/* Estiliza os itens da lista de navegação */
+nav ul li {
+    margin: 0 15px; /* Margem horizontal de 15px */
+    display: inline;
+   
+}
+
+/* Estiliza os links dentro dos itens da lista de navegação */
+nav ul li a {
+    color: #ffffff; /* Cor do texto */
+    text-decoration: none; /* Remove a decoração de texto */
+    font-weight: bold; /* Texto em negrito */
+}
+
+/* Estilo dos links quando são passados com o mouse */
+nav ul li a:hover {
+    text-decoration: underline; /* Sublinhar o texto ao passar o mouse */
+}
+
+/* Classe para adicionar borda aos elementos */
+.borda {
+    border: 2px solid rgb(0, 0, 0); /* Borda sólida de 2px de espessura e cor preta */
+    border-radius: 10px; /* Bordas arredondadas com raio de 10px */
+    float: left; /* Alinha o elemento à esquerda */
+    margin: 0 20px 20px 0; /* Margens ao redor do elemento */
+}
+
+/* Estiliza a tag <footer> */
+footer {
+    background-color: #002500; /* Cor de fundo */
+    color: #ffffff; /* Cor do texto */
+    text-align: center; /* Alinhamento do texto ao centro */
+    padding: 20px; /* Espaçamento interno de 20px */
+    margin-top: 20px; /* Margem superior de 20px */
+}
+
+/* Estiliza a tag <section> */
+section {
+    margin-bottom: 40px; /* Margem inferior de 40px */
+}
+
+/* Estiliza imagens dentro de <section> */
+section img {
+    margin: 10px; /* Margem de 10px ao redor da imagem */
+    border: 2px solid #ccc; /* Borda sólida de 2px com cor cinza */
+    border-radius: 5px; /* Bordas arredondadas com raio de 5px */
+}
+
+/* Estiliza vídeos e áudios dentro de <section> */
+section video, section audio {
+    display: block; /* Exibe como bloco */
+    margin: 20px auto; /* Centraliza e adiciona margem vertical de 20px */
+}
+
+/* Estiliza a tag <form> */
+form {
+    background-color: #ffffff; /* Cor de fundo */
+    padding: 20px; /* Espaçamento interno de 20px */
+    border: 1px solid #ccc; /* Borda sólida de 1px com cor cinza */
+    border-radius: 10px; /* Bordas arredondadas com raio de 10px */
+    margin-top: 20px; /* Margem superior de 20px */
+}
+
+/* Estiliza a tag <fieldset> */
+fieldset {
+    border: 1px solid #002500; /* Borda sólida de 1px com cor verde escuro */
+    border-radius: 10px; /* Bordas arredondadas com raio de 10px */
+    margin-bottom: 20px; /* Margem inferior de 20px */
+    padding: 20px; /* Espaçamento interno de 20px */
+}
+
+/* Estiliza a tag <legend> */
+legend {
+    font-weight: bold; /* Texto em negrito */
+    color: #002500; /* Cor do texto verde escuro */
+}
+
+/* Estiliza a tag <label> */
+label {
+    display: block; /* Exibe como bloco */
+    margin-bottom: 10px; /* Margem inferior de 10px */
+    font-weight: bold; /* Texto em negrito */
+}
+
+/* Estiliza campos de entrada de texto, data, email, senha, textarea e select */
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+    width: 100%; /* Largura total do elemento pai */
+    padding: 10px; /* Espaçamento interno de 10px */
+    margin-bottom: 20px; /* Margem inferior de 20px */
+    border: 1px solid #ccc; /* Borda sólida de 1px com cor cinza */
+    border-radius: 5px; /* Bordas arredondadas com raio de 5px */
+}
+
+/* Estiliza botões de submit e reset */
+input[type="submit"],
+input[type="reset"] {
+    background-color: #002500; /* Cor de fundo verde escuro */
+    color: #ffffff; /* Cor do texto branca */
+    border: none; /* Remove a borda */
+    padding: 10px 20px; /* Espaçamento interno */
+    margin-right: 10px; /* Margem direita de 10px */
+    cursor: pointer; /* Muda o cursor para pointer */
+    border-radius: 5px; /* Bordas arredondadas com raio de 5px */
+    font-weight: bold; /* Texto em negrito */
+}
+
+/* Estiliza botões de submit e reset quando passados com o mouse */
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #004d00; /* Cor de fundo verde médio */
+}
